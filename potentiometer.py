@@ -1,3 +1,5 @@
+#https://learn.adafruit.com/getting-started-with-raspberry-pi-pico-circuitpython/potentiometer-and-pwm-led <- this helped!
+
 import machine
 import time
 
