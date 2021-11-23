@@ -1,0 +1,33 @@
+import machine
+import time
+
+button = machine.Pin(16,machine.Pin.IN,machine.Pin.PULL_UP)
+green = machine.Pin(25,machine.Pin.OUT)
+led1 = machine.Pin(13,machine.Pin.OUT)
+led2 = machine.Pin(14,machine.Pin.OUT)
+led3 = machine.Pin(15,machine.Pin.OUT)
+led1.value(0)
+led2.value(0)
+led3.value(0)
+while True:
+    time.sleep(0.5)
+    if button.value()==0:
+        led1.value(1)
+        time.sleep(0.5)
+        led1.value(0)
+        time.sleep(0.5)
+        led2.value(1)
+        time.sleep(0.5)
+        led2.value(0)
+        time.sleep(0.5)
+        led3.value(1)
+        time.sleep(0.5)
+        led3.value(0)
+        time.sleep(1)
+        led1.value(1)
+        led2.value(1)
+        led3.value(1)
+        time.sleep(1)
+        led1.value(0)
+        led2.value(0)
+        led3.value(0)
