@@ -3,10 +3,11 @@
 import machine
 import time
 
-# Creates Analog->Digital object and defines pin (pin_num)
-adc = machine.ADC(26)
+#Creates a new analog -> digital instance
+ldr = machine.ADC(26)
+
 while True:
-    # Reads data afrom ADC u16 format
-    val = adc.read_u16()
-    print (val)
+    # Reads data from ADC u16 format
+    lightReading = ldr.read_u16()
+    print (lightReading)
     time.sleep(0.2)
